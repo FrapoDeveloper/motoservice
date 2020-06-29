@@ -1,8 +1,9 @@
+<!--EDITADO 1-->
 <!DOCTYPE html>
 <html>
 <head>
     <?php include('view/headboard.php')?>
-    <title>Login || Moto Service</title>
+    <title>Login</title>
     <link rel="icon" href="resource/icon.png">
     <link rel="stylesheet" href="view/Login/style.css">
 </head>
