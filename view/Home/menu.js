@@ -4,6 +4,7 @@ $(function(){
   hands_section()
   hands_Menu()
   search_client()
+
   function hands_section(){
   
     $('#Drivers_section').hide()
@@ -24,6 +25,7 @@ $(function(){
     })
 
     $('#Home').click(function(){
+      document.Home.style.backgroundColor = "red"; 
       $('#Drivers_section').hide()
       $('#Reports_section').hide()
       $('#header_search').show()

@@ -1,5 +1,5 @@
 
-<nav class ="col-md-6 col-xs-12" id="line_graphics">
+<nav class ="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="line_graphics">
       <div>
             <script>
               var trace1 = {
@@ -19,7 +19,6 @@
             </script>
 
        </div>
-           <h3 style="color:rgb(35, 60, 70); margin-top:2em;">Ofertas más solicitadas al mes.</h3>
 
            
  </nav>

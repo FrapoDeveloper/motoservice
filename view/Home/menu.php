@@ -15,7 +15,7 @@ if (empty($_SESSION)) {
   <link rel="stylesheet" href="../flexboxgrid.min.css">
   <link rel="stylesheet" href="admin.css">
   <script src="plotly-latest.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -78,13 +78,7 @@ if (empty($_SESSION)) {
             </div> 
             <p style="font-size:13px;" class="pl-4 pt-2">Ajustes</p>
             <div style="font-size: 12px;" class="row end-xs Ajustes">
-                <a class="item2" style='text-decoration:none;
-                    outline-style: none; cursor:pointer; padding-right:3em; width:100%; '>
-                  <span style="font-size:1em;">
-                    <i class="fas fa-moon"></i>
-                  </span>
-                  <p class="pl-3 ">Noche</p>
-                </a>
+                
                 <a class="item2 " style='text-decoration:none; 
                     outline-style: none; cursor:pointer;  color:#d9d9d9; 
                     padding-right:3em;  width:100%; ' href="../../controller/getout.php">
@@ -125,7 +119,8 @@ if (empty($_SESSION)) {
 
       <!-- SECCION PARA AGREGAR Y VISUALIZAR CHOFERES-->
       <nav id="Drivers_section" style="width:100%; margin-top: 4em;" class="row">
-          <div class="card col-xs-8 col-md-3  center-xs">
+         <div class="row center-xs">
+         <div class="card col-xs-10 col-sm-8 col-md-4 col-lg-4">
                         <div class="card-body">
                             <form  method="post" id="drivers-form"  enctype="multipart/form-data">
                                 
@@ -163,7 +158,7 @@ if (empty($_SESSION)) {
                         </div>
           </div>
       
-          <div class="col-md-9 col-xs-12">
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
           
                 <table  class="bg-info  table table-bordered table-sm text-center">
                 <!--tabla pequeña com borde-->
@@ -183,13 +178,18 @@ if (empty($_SESSION)) {
                 </tbody>
                 </table>
           </div>
+         </div>
+          
       </nav>      
 
       <!-- SECCION DEL LOS REPORTES GRÁFICOS-->
-      <nav class="row center-xs middle-xs" style="width:100%; margin:auto; margin-top: 4em;" id="Reports_section" >          
+      <nav class="row center-xs container around-xs bg-light py-4 pr-4" style="width:100%; margin:auto; margin-top: 4em;" id="Reports_section" >          
+               <h3 style="color:#000000; margin-top:2em;">Reporte de clientes y utilidad</h3>
                <?php include('Graphics_Reports/line_graphics.php'); ?> 
+               <h3 style="color:#000000; margin-top:2em;">Ingresos mensuales de ciudades </h3>
+
                <?php include('Graphics_Reports/bar_graphics.php'); ?>
-               <?php include('Graphics_Reports/date_graphics.php'); ?> 
+               <h3 style="color:#000000; margin-top:2em;">Gráfico de secciones estatégicas</h3>
                <?php include('Graphics_Reports/pie_grapichs.php'); ?>
       </nav>
         
@@ -198,17 +198,6 @@ if (empty($_SESSION)) {
   <script src="../../app/jquery.min.js"></script>
   <script src="menu.js"></script>
 </body>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

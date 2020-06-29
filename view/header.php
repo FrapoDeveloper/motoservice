@@ -10,7 +10,7 @@
           </span>
       </a>
             <form  id="header_search" style="padding-right:10em; " class=" form start-xs form-inline my-2 my-lg-0 "> <!--dentro de la navegacion, margen arriba y abajo de 2, margen de pantalla grande de 0-->
-                <input  style="font-size:13px; "  type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar. . ."><!--margen hacia la derecha de tamaño mediano de 2-->
+                <input  style="font-size:13px; position:fixed"  type="search" id="search" class="form-control mr-sm-2" placeholder="Buscar. . ."><!--margen hacia la derecha de tamaño mediano de 2-->
               
               </form>
 
@@ -20,7 +20,7 @@
 
 
 <style>
- @media only screen and (max-width: 600px) {
+ @media only screen and (max-width: 200px) {
 #open-menu{
   position: absolute;
 

@@ -1,23 +1,18 @@
 
-<nav class ="col-md-6 col-xs-12"   id="pie_graphics">
+<nav class ="col-xs-12 col-sm-12 col-md-12 col-lg-12"   id="pie_graphics">
   <div>
   <script>
 var data = [{
   values: [19, 26, 55],
-  labels: ['Residential', 'Non-Residential', 'Utility'],
+  labels: ['Pedidos rápidos', 'Programar cita', 'Pagina Web'],
   type: 'pie'
 }];
 
-var layout = {
-  height: 400,
-  width: 500
-};
 
-Plotly.newPlot('pie_graphics', data, layout);
+Plotly.newPlot('pie_graphics', data);
 
 </script>
   </div>
-  <h3 style="color:rgb(35, 60, 70); margin-top:4em; margin-bottom:3em; text-align:center;">Comparación de ingresos totales.</h3>
 
 
 </nav>

@@ -1,7 +1,7 @@
 
-<nav class="col-md-6 col-xs-12" id="bar_graphics">
+<nav class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="bar_graphics">
   <div>
-  <script>
+     <script>
           var data = [
           {
             x: ['giraffes', 'orangutans', 'monkeys'],
@@ -11,9 +11,6 @@
         ];
 
         Plotly.newPlot('bar_graphics', data);
-        </script>
+      </script>
   </div>
-  <h3 style="color:rgb(35, 60, 70); margin-top:2em; text-align:center;">Ingresos monetarios mensuales.</h3>
-
-      
 </nav>
