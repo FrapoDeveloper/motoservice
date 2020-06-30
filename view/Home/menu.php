@@ -21,7 +21,7 @@ if (empty($_SESSION)) {
 <body>
   <div class=" row">
        <!-- SECCION DEL PANEL MENU-->
-      <nav id="menu-bar" class="menu-bar pt-1">
+      <nav id="menu-bar" style="z-index:2000;" class="menu-bar pt-1">
             <div class="scroll row middle-xs pt-2 center-xs">
                   <h4 style="padding-left:2em; " class="center-xs col-xs-10">Taxi Service</h4>
                   <span class="row pb-4 center-xs col-xs-2" style="font-size: 1em; color: #d9d9d9;">
@@ -95,6 +95,12 @@ if (empty($_SESSION)) {
 
       <!-- SECCION DEL PANEL DE PEDIDOS DE CLIENTES-->
       <nav id="Home_section" class="table col-md-12" style="margin-top:3.5em; z-index:10;">
+         <table  class="bg-primary  table table-bordered table-sm text-center" >
+              <thead id="Client_wanted">
+              </thead>      
+         </table>
+         
+         
           <nav>
             <table class="bg-primary  table table-bordered table-sm text-center">
               <!--tabla pequeña com borde-->

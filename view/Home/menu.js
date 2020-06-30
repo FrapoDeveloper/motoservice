@@ -1,10 +1,9 @@
-
+//Teclado funcional! commit 4
 $(function(){
   let edit = false
   hands_section()
   hands_Menu()
   search_client()
-
   function hands_section(){
   
     $('#Drivers_section').hide()
@@ -25,7 +24,7 @@ $(function(){
     })
 
     $('#Home').click(function(){
-      document.Home.style.backgroundColor = "red"; 
+
       $('#Drivers_section').hide()
       $('#Reports_section').hide()
       $('#header_search').show()
@@ -286,17 +285,43 @@ $(function(){
   }
 
   function search_client(){
-    $('#search').keyup(function(){
-      let search = $('#search').val()
+    $('#Search').keyup(function(){
+      
+    let search_f = $('#Search').val()
+    if(!search_f){
+      $('#Client_wanted').hide()
+    }else{
       $.ajax({
-        url: '../../controller/single_driver.php',
+        url: '../../controller/search_client.php',
         type: 'POST',
-        data: {search}, 
+        data: {search_f}, 
         success: function(response){
-          console.log(response)
+          let clientObjectWanted = JSON.parse(response)
+          let row_design = '' 
+          clientObjectWanted.forEach(client => {
+                row_design += `<tr class="bg-secondary text-center" >
+                <td>${client.date_client_b}</td>
+                <td>${client.phone_client_b}</td>
+                <td>${client.name_client_b}</td>
+                <td>${client.name_driver_b}</td>
+                <td><p>S/${client.import_client_b}</p></td>
+                <td>
+                <button class="client-delete btn btn-danger" style="font-size:12px;">
+                Eliminar
+                </button>
+                </td>
+                </tr>`
+          })
+            $('#Client_wanted').html(row_design)
+            $('#Client_wanted').show()
+
+          
         }
 
       })
+
+    }
+    
     })
 
 
@@ -304,3 +329,4 @@ $(function(){
 
 
 });
+
